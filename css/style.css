@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #212121;
+}
+
+.form-text > div {
+    transition: .2s;
+}
+
+#usernameHelp, #passwordHelp, #confirmPasswordHelp, #firstnameHelp, #lastnameHelp, #dniHelp {
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: 300ms;
+}
+
+#rusername:focus + #usernameHelp {
+    height: 40px;
+    opacity: 1;
+}
+
+#rpassword:focus + #passwordHelp {
+    height: 100px;
+    opacity: 1;
+}
+
+#rconfirmpassword:focus + #confirmPasswordHelp, #firstname:focus + #firstnameHelp, #lastname:focus + #lastnameHelp, #dni:focus + #dniHelp {
+    height: 20px;
+    opacity: 1;
+}
